@@ -1,0 +1,39 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define ll long long
+#define For(i,n) for(int i=0;i<n;i++)
+#define VI vector<int>
+#define VL vector<ll>
+#define fast ios_base::sync_with_stdio(0); cin.tie(0)
+#define pb push_back
+const int MOD = 1000000007;
+char arr[1111][1111];
+int a[101],r[10001],ans[10001];
+int main()
+{
+    fast;
+    int t;
+    cin>>t;
+    while(t--)
+    {
+        int n;
+       cin >> n;
+       int a[n];
+		ll sum = 0,odd = 0,even = 0;
+		for(int i = 1;i <= n;i++) {
+			cin >> a[i];
+			if(i % 2) odd += a[i];
+			else even += a[i];
+		}
+		if(odd < even) {
+			for(int i = 1;i <= n;i += 2) a[i] = 1;
+		}
+		else {
+			for(int i = 2;i <= n;i += 2) a[i] = 1;
+		}
+		for(int i = 1;i <= n;i++) cout << a[i] << ' ';
+		cout << '\n';
+    }
+    
+    return 0;  
+}
