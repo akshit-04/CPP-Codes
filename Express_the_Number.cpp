@@ -14,6 +14,7 @@ int main()
     cin >> t;
     while (t--)
     {
+        // new line
         int n, x;
         cin >> n >> x;
         if (x == 0 && n % 2 == 1)
